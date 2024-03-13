@@ -11,15 +11,11 @@ class MainMenu(number: Int, name: String) : Menu(number, name) {
     }
 
     override fun display() {
-        println("[ 아이스크림 ]")
-        println("1. 초코")
-        println("2. 바닐라")
-        println("[ 커피 ]")
-        println("3. 아메리카노")
-        println("4. 카페라떼")
-        println("[ 케익 ]")
-        println("5. 케익")
-        println("----------------------------")
+        println("1. 초코 아이스크림")
+        println("2. 바닐라 아이스크림")
+        println("3. 아메리카노 커피")
+        println("4. 카페라떼 커피")
+        println("5. 케이크")
         println("0. 종료")
     }
 }
