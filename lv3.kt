@@ -153,20 +153,29 @@ class CakeMenu (number: Int, name: String, price: Int) : Menu(number, name) {
 
 fun main() {
 
-    val menus = listOf(
-        MainMenu(0, "메인 메뉴"),
-        ChocoIceCreamMenu(1, "초코 아이스크림 메뉴", 0),
-        VanillaIceCreamMenu(2, "바닐라 아이스크림 메뉴", 0),
-        AmericanoMenu(3, "아메리카노 메뉴", 0),
-        CaffeLatteMenu(4, "카페라떼 메뉴", 0),
-        CakeMenu(5, "케이크 메뉴", 0)
-    )
+    while (true) {
+        val menus = listOf(
+            MainMenu(0, "메인 메뉴"),
+            ChocoIceCreamMenu(1, "초코 아이스크림 메뉴", 0),
+            VanillaIceCreamMenu(2, "바닐라 아이스크림 메뉴", 0),
+            AmericanoMenu(3, "아메리카노 메뉴", 0),
+            CaffeLatteMenu(4, "카페라떼 메뉴", 0),
+            CakeMenu(5, "케이크 메뉴", 0)
+        )
 
-    val mainMenu = menus[0]
-    mainMenu.display()
+        val mainMenu = menus[0]
+        mainMenu.display()
 
-    val selectedMenuNum = readLine()?.toIntOrNull() ?: 0
-    val selectedMenu = menus.firstOrNull { it.number == selectedMenuNum }
+        val selectedMenuNum = readLine()?.toIntOrNull()
 
-    selectedMenu?.display() ?: println("잘못 누르셨습니다.")
+        if (selectedMenuNum == 0) {
+            println("종료합니다.")
+            break
+        }
+
+        val selectedMenu = menus.firstOrNull { it.number == selectedMenuNum }
+        selectedMenu?.display() ?: println("잘못 누르셨습니다.")
+
+        continue
+    }
 }
