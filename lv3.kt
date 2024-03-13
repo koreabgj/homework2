@@ -36,7 +36,7 @@ class ChocoIceCreamMenu(number: Int, name: String, price: Int) : Menu(number, na
         println("5. 처음으로 이동")
         println("0. 종료")
 
-        val subMenu1 = readLine()!!.toInt()
+        val subMenu1 = readLine()?.toIntOrNull() ?: 0
 
         if (subMenu1 == 0) {
             println("종료합니다.")
@@ -63,7 +63,7 @@ class VanillaIceCreamMenu (number: Int, name: String, price: Int) : Menu(number,
         println("5. 처음으로 이동")
         println("0. 종료")
 
-        val subMenu2 = readLine()!!.toInt()
+        val subMenu2 = readLine()?.toIntOrNull() ?: 0
 
         if (subMenu2 == 0) {
             println("종료합니다.")
@@ -89,7 +89,7 @@ class AmericanoMenu (number: Int, name: String, price: Int) : Menu(number, name)
         println("4. 처음으로 이동")
         println("0. 종료")
 
-        val subMenu3 = readLine()!!.toInt()
+        val subMenu3 = readLine()?.toIntOrNull() ?: 0
 
         if (subMenu3 == 0) {
             println("종료합니다.")
@@ -114,7 +114,7 @@ class CaffeLatteMenu (number: Int, name: String, price: Int) : Menu(number, name
         println("4. 처음으로 이동")
         println("0. 종료")
 
-        val subMenu4 = readLine()!!.toInt()
+        val subMenu4 = readLine()?.toIntOrNull() ?: 0
 
         if (subMenu4 == 0) {
             println("종료합니다.")
@@ -139,7 +139,7 @@ class CakeMenu (number: Int, name: String, price: Int) : Menu(number, name) {
         println("4. 처음으로 이동")
         println("0. 종료")
 
-        val subMenu5 = readLine()!!.toInt()
+        val subMenu5 = readLine()?.toIntOrNull() ?: 0
 
         if (subMenu5 == 0) {
             println("종료합니다.")
