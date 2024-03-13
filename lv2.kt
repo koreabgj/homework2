@@ -141,11 +141,11 @@ fun main() {
     while (true) {
         println("아래에서 원하시는 메뉴를 선택해주세요!")
         println("----------------------------")
-        println("1. 초코")
-        println("2. 바닐라")
-        println("3. 아메리카노")
-        println("4. 카페라떼")
-        println("5. 케익")
+        println("1. 초코 아이스크림")
+        println("2. 바닐라 아이스크림")
+        println("3. 아메리카노 커피")
+        println("4. 카페라떼 커피")
+        println("5. 케이크")
         println("0. 종료")
 
         val mainMenu = readLine()?.toIntOrNull() ?: 0
