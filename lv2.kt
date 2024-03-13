@@ -138,46 +138,51 @@ class CakeMenu (val number: Int, val name: String, val price: Int) {
 
 fun main() {
 
-    println("아래에서 원하시는 메뉴를 선택해주세요!")
-    println("----------------------------")
-    println("1. 초코")
-    println("2. 바닐라")
-    println("3. 아메리카노")
-    println("4. 카페라떼")
-    println("5. 케익")
-    println("0. 종료")
+    while (true) {
+        println("아래에서 원하시는 메뉴를 선택해주세요!")
+        println("----------------------------")
+        println("1. 초코")
+        println("2. 바닐라")
+        println("3. 아메리카노")
+        println("4. 카페라떼")
+        println("5. 케익")
+        println("0. 종료")
 
-    val mainMenu = readLine()?.toIntOrNull() ?: 0
+        val mainMenu = readLine()?.toIntOrNull() ?: 0
 
-    if (mainMenu == 0) {
-        println("종료합니다.")
-    }
-
-    when (mainMenu) {
-
-        1 -> {
-            val chocoIceCreamMenu = ChocoIceCreamMenu(1, "초코 아이스크림 메뉴", 0)
-            chocoIceCreamMenu.display()
+        if (mainMenu == 0) {
+            println("종료합니다.")
+            break
         }
 
-        2 -> {
-            val vanillaIceCreamMenu = VanillaIceCreamMenu(2, "바닐라 아이스크림 메뉴", 0)
-            vanillaIceCreamMenu.display()
-        }
+        when (mainMenu) {
 
-        3 -> {
-            val americanoMenu = AmericanoMenu(3, "아메리카노 메뉴", 0)
-            americanoMenu.display()
-        }
+            1 -> {
+                val chocoIceCreamMenu = ChocoIceCreamMenu(1, "초코 아이스크림 메뉴", 0)
+                chocoIceCreamMenu.display()
+            }
 
-        4 -> {
-            val caffeLatteMenu = CaffeLatteMenu(4,"카페라떼 메뉴", 0)
-            caffeLatteMenu.display()
-        }
+            2 -> {
+                val vanillaIceCreamMenu = VanillaIceCreamMenu(2, "바닐라 아이스크림 메뉴", 0)
+                vanillaIceCreamMenu.display()
+            }
 
-        5 -> {
-            val cakeMenu = CakeMenu(5, "케이크 메뉴,", 0)
-            cakeMenu.display()
+            3 -> {
+                val americanoMenu = AmericanoMenu(3, "아메리카노 메뉴", 0)
+                americanoMenu.display()
+            }
+
+            4 -> {
+                val caffeLatteMenu = CaffeLatteMenu(4, "카페라떼 메뉴", 0)
+                caffeLatteMenu.display()
+            }
+
+            5 -> {
+                val cakeMenu = CakeMenu(5, "케이크 메뉴,", 0)
+                cakeMenu.display()
+            }
+
+            else -> println("잘못 누르셨습니다.")
         }
     }
 }
