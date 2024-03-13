@@ -44,7 +44,6 @@ class ChocoIceCreamMenu(number: Int, name: String, price: Int) : Menu(number, na
             3 -> println("초코 헤이즐넛을 선택하셨습니다.")
             4 -> println("초코 헤이즐넛 - 아몬드 토핑을 선택하셨습니다.")
             5 -> println("메인 메뉴로 이동합니다.")
-            else -> println("잘못 누르셨습니다.")
         }
     }
 }
@@ -71,7 +70,6 @@ class VanillaIceCreamMenu (number: Int, name: String, price: Int) : Menu(number,
             3 -> println("바닐라 캐러멜을 선택하셨습니다.")
             4 -> println("바닐라 스트로베리를 선택하셨습니다.")
             5 -> println("메인 메뉴로 이동합니다.")
-            else -> println("잘못 누르셨습니다.")
         }
     }
 }
@@ -96,7 +94,6 @@ class AmericanoMenu (number: Int, name: String, price: Int) : Menu(number, name)
             2 -> println("아메리카노R을 선택하셨습니다.")
             3 -> println("아메리카노L을 선택하셨습니다.")
             4 -> println("메인 메뉴로 이동합니다.")
-            else -> println("잘못 누르셨습니다.")
         }
     }
 }
@@ -121,7 +118,6 @@ class CaffeLatteMenu (number: Int, name: String, price: Int) : Menu(number, name
             2 -> println("카페라떼R을 선택하셨습니다.")
             3 -> println("카페라떼L을 선택하셨습니다.")
             4 -> println("메인 메뉴로 이동합니다.")
-            else -> println("잘못 누르셨습니다.")
         }
     }
 }
@@ -146,7 +142,6 @@ class CakeMenu (number: Int, name: String, price: Int) : Menu(number, name) {
             2 -> println("치즈 케익을 선택하셨습니다.")
             3 -> println("고구마 케익을 선택하셨습니다.")
             4 -> println("메인 메뉴로 이동합니다.")
-            else -> println("잘못 누르셨습니다.")
         }
     }
 }
