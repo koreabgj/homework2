@@ -148,7 +148,7 @@ fun main() {
         println("5. 케이크")
         println("0. 종료")
 
-        val mainMenu = readLine()?.toIntOrNull() ?: 0
+        val mainMenu = readLine()?.toIntOrNull()
 
         if (mainMenu == 0) {
             println("종료합니다.")
@@ -184,5 +184,6 @@ fun main() {
 
             else -> println("잘못 누르셨습니다.")
         }
+        continue
     }
 }
