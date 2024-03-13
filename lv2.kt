@@ -1,24 +1,5 @@
 class MainMenu (val number: Int, val name: String) {
-    fun display() {
-        println("아래에서 원하시는 메뉴를 선택해주세요!")
-        println("----------------------------")
-        println("[ 아이스크림 ]")
-        println("1. 초코")
-        println("2. 바닐라")
-        println("[ 커피 ]")
-        println("3. 아메리카노")
-        println("4. 카페라떼")
-        println("[ 케익 ]")
-        println("5. 케익")
-        println("----------------------------")
-        println("0. 종료")
-
-        val mainMenu = readLine()!!.toInt()
-
-        if (mainMenu == 0) {
-            println("종료합니다.")
-        }
-    }
+    fun display() { }
 }
 
 class ChocoIceCreamMenu (val number: Int, val name: String, val price: Int) {
@@ -157,44 +138,46 @@ class CakeMenu (val number: Int, val name: String, val price: Int) {
 
 fun main() {
 
-    val mainMenu = MainMenu(1, "메인 메뉴")
+    println("아래에서 원하시는 메뉴를 선택해주세요!")
+    println("----------------------------")
+    println("1. 초코")
+    println("2. 바닐라")
+    println("3. 아메리카노")
+    println("4. 카페라떼")
+    println("5. 케익")
+    println("0. 종료")
 
-    mainMenu.display()
+    val mainMenu = readLine()?.toIntOrNull() ?: 0
+
+    if (mainMenu == 0) {
+        println("종료합니다.")
+    }
 
     when (mainMenu) {
 
         1 -> {
             val chocoIceCreamMenu = ChocoIceCreamMenu(1, "초코 아이스크림 메뉴", 0)
-
             chocoIceCreamMenu.display()
         }
 
         2 -> {
             val vanillaIceCreamMenu = VanillaIceCreamMenu(2, "바닐라 아이스크림 메뉴", 0)
-
             vanillaIceCreamMenu.display()
         }
 
         3 -> {
             val americanoMenu = AmericanoMenu(3, "아메리카노 메뉴", 0)
-
             americanoMenu.display()
         }
 
         4 -> {
             val caffeLatteMenu = CaffeLatteMenu(4,"카페라떼 메뉴", 0)
-
             caffeLatteMenu.display()
         }
 
         5 -> {
             val cakeMenu = CakeMenu(5, "케이크 메뉴,", 0)
-
             cakeMenu.display()
-        }
-        
-        else -> {
-            println("잘못 누르셨습니다.")
         }
     }
 }
