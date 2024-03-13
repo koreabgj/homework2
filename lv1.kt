@@ -28,7 +28,7 @@ fun main() {
                 println("5. 처음으로 이동")
                 println("0. 종료")
 
-                val subMenu1 = readLine()?.toIntOrNull() ?: 0
+                val subMenu1 = readLine()?.toIntOrNull()
 
                 if (subMenu1 == 0) {
                     println("종료합니다.")
@@ -56,7 +56,7 @@ fun main() {
                 println("5. 처음으로 이동")
                 println("0. 종료")
 
-                val subMenu2 = readLine()?.toIntOrNull() ?: 0
+                val subMenu2 = readLine()?.toIntOrNull()
 
                 if (subMenu2 == 0) {
                     println("종료합니다.")
@@ -83,7 +83,7 @@ fun main() {
                 println("4. 처음으로 이동")
                 println("0. 종료")
 
-                val subMenu3 = readLine()?.toIntOrNull() ?: 0
+                val subMenu3 = readLine()?.toIntOrNull()
 
                 if (subMenu3 == 0) {
                     println("종료합니다.")
@@ -109,7 +109,7 @@ fun main() {
                 println("4. 처음으로 이동")
                 println("0. 종료")
 
-                val subMenu4 = readLine()?.toIntOrNull() ?: 0
+                val subMenu4 = readLine()?.toIntOrNull()
 
                 if (subMenu4 == 0) {
                     println("종료합니다.")
@@ -135,7 +135,7 @@ fun main() {
                 println("4. 처음으로 이동")
                 println("0. 종료")
 
-                val subMenu5 = readLine()?.toIntOrNull() ?: 0
+                val subMenu5 = readLine()?.toIntOrNull()
 
                 if (subMenu5 == 0) {
                     println("종료합니다.")
