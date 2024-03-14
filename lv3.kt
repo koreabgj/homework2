@@ -20,17 +20,31 @@ class MainMenu(number: Int, name: String) : Menu(number, name) {
     }
 }
 
-class ChocoIceCreamMenu(number: Int, name: String, price: Int) : Menu(number, name) {
-
+abstract class IceCreamMenu(number: Int, name: String, price: Int) : Menu(number, name) {
     override fun display() {
         println("아래에서 원하시는 아이스크림을 선택해주세요!")
         println("----------------------------")
+        printSubMenu()
+        println("5. 처음으로 이동")
+        println("0. 종료")
+
+        val subMenu = readLine()?.toIntOrNull() ?: 0
+
+        if (subMenu == 0) {
+            println("종료합니다.")
+        }
+    }
+
+    abstract fun printSubMenu()
+}
+
+class ChocoIceCreamMenu(number: Int, name: String, price: Int) :
+    IceCreamMenu(number, name, price) {
+    override fun printSubMenu() {
         println("1. 초코 익스트림                 |   1900")
         println("2. 초코 익스트림 - 마시멜로우 토핑   |   2000")
         println("3. 초코 헤이즐넛                 |   2000")
         println("4. 초코 헤이즐넛 - 아몬드 토핑      |   2100")
-        println("5. 처음으로 이동")
-        println("0. 종료")
 
         val subMenu1 = readLine()?.toIntOrNull() ?: 0
 
@@ -48,15 +62,13 @@ class ChocoIceCreamMenu(number: Int, name: String, price: Int) : Menu(number, na
     }
 }
 
-class VanillaIceCreamMenu (number: Int, name: String, price: Int) : Menu(number, name) {
-
-    override fun display() {
-        println("1. 바닐라 익스트림                 |   1900")
-        println("2. 바닐라 익스트림 - 벨기에 초코 토핑  |   2000")
-        println("3. 바닐라 캐러멜                   |   2100")
-        println("4. 바닐라 스트로베리                |   2100")
-        println("5. 처음으로 이동")
-        println("0. 종료")
+class VanillaIceCreamMenu(number: Int, name: String, price: Int) :
+    IceCreamMenu(number, name, price) {
+    override fun printSubMenu() {
+        println("1. 초코 익스트림                 |   1900")
+        println("2. 초코 익스트림 - 마시멜로우 토핑   |   2000")
+        println("3. 초코 헤이즐넛                 |   2000")
+        println("4. 초코 헤이즐넛 - 아몬드 토핑      |   2100")
 
         val subMenu2 = readLine()?.toIntOrNull() ?: 0
 
@@ -74,14 +86,29 @@ class VanillaIceCreamMenu (number: Int, name: String, price: Int) : Menu(number,
     }
 }
 
-class AmericanoMenu (number: Int, name: String, price: Int) : Menu(number, name) {
-
+abstract class CoffeeMenu(number: Int, name: String, price: Int) : Menu(number, name) {
     override fun display() {
+        println("아래에서 원하시는 커피를 선택해주세요!")
+        println("----------------------------")
+        printSubMenu()
+        println("4. 처음으로 이동")
+        println("0. 종료")
+
+        val subMenu = readLine()?.toIntOrNull() ?: 0
+
+        if (subMenu == 0) {
+            println("종료합니다.")
+        }
+    }
+
+    abstract fun printSubMenu()
+}
+
+class AmericanoMenu(number: Int, name: String, price: Int) : CoffeeMenu(number, name, price) {
+    override fun printSubMenu() {
         println("1. 아메리카노I   |   2000")
         println("2. 아메리카노R   |   2500")
         println("3. 아메리카노L   |   3000")
-        println("4. 처음으로 이동")
-        println("0. 종료")
 
         val subMenu3 = readLine()?.toIntOrNull() ?: 0
 
@@ -98,14 +125,11 @@ class AmericanoMenu (number: Int, name: String, price: Int) : Menu(number, name)
     }
 }
 
-class CaffeLatteMenu (number: Int, name: String, price: Int) : Menu(number, name) {
-
-    override fun display() {
+class CaffeLatteMenu(number: Int, name: String, price: Int) : CoffeeMenu(number, name, price) {
+    override fun printSubMenu() {
         println("1. 카페라떼I   |   3000")
         println("2. 카페라떼R   |   3500")
         println("3. 카페라떼L   |   4000")
-        println("4. 처음으로 이동")
-        println("0. 종료")
 
         val subMenu4 = readLine()?.toIntOrNull() ?: 0
 
@@ -122,8 +146,7 @@ class CaffeLatteMenu (number: Int, name: String, price: Int) : Menu(number, name
     }
 }
 
-class CakeMenu (number: Int, name: String, price: Int) : Menu(number, name) {
-
+class CakeMenu(number: Int, name: String, price: Int) : Menu(number, name) {
     override fun display() {
         println("1. 블랙베리   |   5000")
         println("2. 치즈      |   5000")
