@@ -65,10 +65,10 @@ class ChocoIceCreamMenu(number: Int, name: String, price: Int) :
 class VanillaIceCreamMenu(number: Int, name: String, price: Int) :
     IceCreamMenu(number, name, price) {
     override fun printSubMenu() {
-        println("1. 초코 익스트림                 |   1900")
-        println("2. 초코 익스트림 - 마시멜로우 토핑   |   2000")
-        println("3. 초코 헤이즐넛                 |   2000")
-        println("4. 초코 헤이즐넛 - 아몬드 토핑      |   2100")
+        println("1. 바닐라 익스트림                 |   1900")
+        println("2. 바닐라 익스트림 - 벨기에 초코 토핑  |   2000")
+        println("3. 바닐라 캐러멜                   |   2100")
+        println("4. 바닐라 스트로베리                |   2100")
 
         val subMenu2 = readLine()?.toIntOrNull() ?: 0
 
