@@ -3,7 +3,6 @@ abstract class Menu(val number: Int, val name: String) {
 }
 
 class MainMenu(number: Int, name: String) : Menu(number, name) {
-
     init {
         initMenu()
     }
