@@ -23,7 +23,7 @@ class MainMenu(number: Int, name: String) : Menu(number, name) {
 abstract class IceCreamMenu(number: Int, name: String, price: Int) : Menu(number, name) {
     override fun display() {
         println("아래에서 원하시는 아이스크림을 선택해주세요!")
-        println("----------------------------")
+        println("--------------------------------")
         printSubMenu()
         println("5. 처음으로 이동")
         println("0. 종료")
@@ -147,7 +147,9 @@ class CaffeLatteMenu(number: Int, name: String, price: Int) : CoffeeMenu(number,
 }
 
 class CakeMenu(number: Int, name: String, price: Int) : Menu(number, name) {
-    override fun display() {
+    override fun display() {              
+        println("아래에서 원하시는 케이크를 선택해주세요!")
+        println("-----------------------------")
         println("1. 블랙베리   |   5000")
         println("2. 치즈      |   5000")
         println("3. 고구마     |   5500")
