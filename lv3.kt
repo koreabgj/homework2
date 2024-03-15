@@ -5,12 +5,13 @@ abstract class Menu(val number: Int, val name: String) {
 class MainMenu(number: Int, name: String) : Menu(number, name) {
 
     init {
+        initMenu()
+    }
+
+    private fun initMenu() {
         println("주문 화면입니다.")
         println("아래에서 원하시는 메뉴를 선택해주세요!")
         println("----------------------------")
-    }
-
-    override fun display() {
         println("1. 초코 아이스크림")
         println("2. 바닐라 아이스크림")
         println("3. 아메리카노 커피")
@@ -18,6 +19,8 @@ class MainMenu(number: Int, name: String) : Menu(number, name) {
         println("5. 케이크")
         println("0. 종료")
     }
+
+    override fun display() { }
 }
 
 abstract class IceCreamMenu(number: Int, name: String, price: Int) : Menu(number, name) {
