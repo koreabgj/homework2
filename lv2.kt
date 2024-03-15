@@ -123,9 +123,9 @@ class CakeMenu (val number: Int, val name: String, val price: Int) {
         }
 
         when (subMenu5) {
-            1 -> println("블랙베리 케익을 선택하셨습니다.")
-            2 -> println("치즈 케익을 선택하셨습니다.")
-            3 -> println("고구마 케익을 선택하셨습니다.")
+            1 -> println("블랙베리 케이크를 선택하셨습니다.")
+            2 -> println("치즈 케이크를 선택하셨습니다.")
+            3 -> println("고구마 케이크를 선택하셨습니다.")
             4 -> println("메인 메뉴로 이동합니다.")
         }
     }
